@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+	<meta charset="utf-8">
+	<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+</head>
+<style type="text/css">
+	body { margin: 0; }
+
+	#container {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		background-color: #95afc0;
+	}
+
+	#frame {
+		background-color: #222f3e;
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: 10px;
+		border-radius: 20px;
+		padding: 10px;
+		font-family: Fredoka One;
+		font-size: 5em;
+	}
+
+	.tile {
+		color: #fff;
+		background-color: #34495e;
+		width: 150px;
+		height: 150px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		border-radius: 10px;
+		transition: 0.3s;
+		cursor: pointer;
+		user-select: none;
+		-moz-user-select: none;
+	}
+
+	.tile:hover {
+		background-color: #2c3e50;
+	}
+
+	#message {
+		position: absolute;
+		font-family: Oswald, sans-serif;
+		font-size: 100px;
+		opacity: 0;
+		visibility: hidden;
+		transition: visibility 0s, opacity 0.5s linear, top 0.5s;
+		user-select: none;
+		top: 0px;
+	}
+
+</style>
+<body>
+	<div id="container">
+		<div id="message">The winner is X !!</div>
+		<div id="frame">
+			<div class="tile">X</div>
+			<div class="tile">X</div>
+			<div class="tile">X</div>
+			<div class="tile">O</div>
+			<div class="tile">O</div>
+			<div class="tile">O</div>
+			<div class="tile">X</div>
+			<div class="tile">X</div>
+			<div class="tile">X</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
